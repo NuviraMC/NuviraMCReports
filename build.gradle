@@ -79,18 +79,20 @@ jar {
 }
 
 shadowJar {
-    archiveClassifier.set('all')
-    relocate 'com.zaxxer.hikari', 'dev.aevorinstudios.aevorinreports.libs.hikari'
-    relocate 'com.google.gson', 'dev.aevorinstudios.aevorinreports.libs.gson'
-    relocate 'org.bstats', 'dev.aevorinstudios.aevorinreports.libs.bstats'
-    relocate 'net.dv8tion.jda', 'dev.aevorinstudios.aevorinreports.libs.jda'
-    relocate 'com.neovisionaries.ws', 'dev.aevorinstudios.aevorinreports.libs.neovisionaries'
-    relocate 'com.fasterxml.jackson', 'dev.aevorinstudios.aevorinreports.libs.jackson'
-    relocate 'org.apache.commons.collections4', 'dev.aevorinstudios.aevorinreports.libs.collections4'
-    relocate 'gnu.trove', 'dev.aevorinstudios.aevorinreports.libs.trove'
-    relocate 'okhttp3', 'dev.aevorinstudios.aevorinreports.libs.okhttp3'
-    relocate 'okio', 'dev.aevorinstudios.aevorinreports.libs.okio'
-    relocate 'dev.faststats', 'dev.aevorinstudios.aevorinReports.libs.faststats'
+    relocate 'com.zaxxer.hikari', 'dev.aevorinstudios.nuviramcreports.libs.hikari'
+    relocate 'com.google.gson', 'dev.aevorinstudios.nuviramcreports.libs.gson'
+    relocate 'org.bstats', 'dev.aevorinstudios.nuviramcreports.libs.bstats'
+    relocate 'net.dv8tion.jda', 'dev.aevorinstudios.nuviramcreports.libs.jda'
+    relocate 'com.neovisionaries.ws', 'dev.aevorinstudios.nuviramcreports.libs.neovisionaries'
+    relocate 'com.fasterxml.jackson', 'dev.aevorinstudios.nuviramcreports.libs.jackson'
+    relocate 'org.apache.commons.collections4', 'dev.aevorinstudios.nuviramcreports.libs.collections4'
+    relocate 'gnu.trove', 'dev.aevorinstudios.nuviramcreports.libs.trove'
+    relocate 'okhttp3', 'dev.aevorinstudios.nuviramcreports.libs.okhttp3'
+    relocate 'okio', 'dev.aevorinstudios.nuviramcreports.libs.okio'
+    relocate 'dev.faststats', 'dev.aevorinstudios.nuviramcreports.libs.faststats'
 }
 
+// Make shadowJar the default jar artifact
+jar.enabled = false
 build.dependsOn shadowJar
+artifacts.archives shadowJar
