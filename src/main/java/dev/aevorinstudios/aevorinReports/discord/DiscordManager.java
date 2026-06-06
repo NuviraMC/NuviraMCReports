@@ -278,7 +278,7 @@ public class DiscordManager {
         embed.addField("Location", "`" + (report.getWorld() != null ? report.getWorld() : "Unknown") + "` ("
                 + (report.getCoordinates() != null ? report.getCoordinates() : "Unknown") + ")", true);
 
-        String footer = plugin.getConfig().getString("discord.notifications.footer", "AevorinReports • %date%")
+        String footer = plugin.getConfig().getString("discord.notifications.footer", "NuviraMCReports • %date%")
                 .replace("%date%", report.getCreatedAt().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         embed.setFooter(footer);
 

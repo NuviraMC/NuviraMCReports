@@ -123,7 +123,7 @@ public class LanguageManager {
     public String getRawMessage(String path) {
         String msg = langConfig.getString(path, "Missing lang: " + path);
         if (!path.equals("messages.prefix") && msg.contains("{prefix}")) {
-            String prefix = langConfig.getString("messages.prefix", "&8[&bAevorinReports&8]&r ");
+            String prefix = langConfig.getString("messages.prefix", "&8[&bNuviraMCReports&8]&r ");
             msg = msg.replace("{prefix}", prefix);
         }
         return msg;
@@ -136,7 +136,7 @@ public class LanguageManager {
     public String getMessage(String path, String defaultValue) {
         String msg = langConfig.getString(path, defaultValue);
         if (!path.equals("messages.prefix") && msg.contains("{prefix}")) {
-            String prefix = langConfig.getString("messages.prefix", "&8[&bAevorinReports&8]&r ");
+            String prefix = langConfig.getString("messages.prefix", "&8[&bNuviraMCReports&8]&r ");
             msg = msg.replace("{prefix}", prefix);
         }
         return dev.aevorinstudios.aevorinReports.utils.MessageUtils.parseToLegacy(msg);
@@ -155,7 +155,7 @@ public class LanguageManager {
         if (list.isEmpty()) {
             return java.util.Collections.singletonList("Missing lang list: " + path);
         }
-        String prefix = langConfig.getString("messages.prefix", "&8[&bAevorinReports&8]&r ");
+        String prefix = langConfig.getString("messages.prefix", "&8[&bNuviraMCReports&8]&r ");
         java.util.List<String> parsedList = new java.util.ArrayList<>();
         for (String s : list) {
             String msg = s;
@@ -169,7 +169,7 @@ public class LanguageManager {
 
     public java.util.List<String> getMessageList(String path, Map<String, String> placeholders) {
         java.util.List<String> list = langConfig.getStringList(path);
-        String prefix = langConfig.getString("messages.prefix", "&8[&bAevorinReports&8]&r ");
+        String prefix = langConfig.getString("messages.prefix", "&8[&bNuviraMCReports&8]&r ");
         java.util.List<String> replacedList = new java.util.ArrayList<>();
         for (String s : list) {
             String replaced = s;
@@ -193,7 +193,7 @@ public class LanguageManager {
     }
 
     public String getPrefix() {
-        return getMessage("messages.prefix", "&8[&bAevorinReports&8]&r ");
+        return getMessage("messages.prefix", "&8[&bNuviraMCReports&8]&r ");
     }
 
     public java.util.List<String> getReasonList() {

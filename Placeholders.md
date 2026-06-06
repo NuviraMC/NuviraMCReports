@@ -1,4 +1,4 @@
-# AevorinReports PlaceholderAPI Placeholders
+# NuviraMCReports PlaceholderAPI Placeholders
 
 All placeholders use the `reports` PlaceholderAPI identifier.
 
@@ -64,7 +64,7 @@ These placeholders count reports across the whole reports database.
 
 These placeholders count reports for one configured server name. Replace `<server>` with the server name stored in `config.yml` under `server-name`.
 
-These placeholders only return server-specific counts when AevorinReports is using MySQL and multiple servers are connected to the same database.
+These placeholders only return server-specific counts when NuviraMCReports is using MySQL and multiple servers are connected to the same database.
 
 | Placeholder | Description |
 | --- | --- |
@@ -85,4 +85,4 @@ Examples:
 - PlaceholderAPI must be installed for these placeholders to work.
 - Current-viewer placeholders need a player context. If the plugin requesting the placeholder does not provide a player, player-based placeholders may return nothing.
 - Specific-player placeholders use player names, not UUIDs.
-- `valid` currently means resolved, because AevorinReports does not have a separate valid status.
+- `valid` currently means resolved, because NuviraMCReports does not have a separate valid status.

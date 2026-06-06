@@ -103,7 +103,7 @@ public class ConfigManager {
                         config.getDatabase().getMysql()
                                 .setPort(asInt(mysql.get("port"), 3306));
                         config.getDatabase().getMysql()
-                                .setDatabase(asString(mysql.get("database"), "aevorinreports"));
+                                .setDatabase(asString(mysql.get("database"), "nuviramcreports"));
                         config.getDatabase().getMysql().setUsername(asString(mysql.get("username"), "root"));
                         config.getDatabase().getMysql().setPassword(asString(mysql.get("password"), ""));
                     }
@@ -229,7 +229,7 @@ public class ConfigManager {
                         config.getDiscord().getNotifications()
                                 .setColor(asString(notifyRaw.get("color"), "#ff5555"));
                         config.getDiscord().getNotifications()
-                                .setFooter(asString(notifyRaw.get("footer"), "AevorinReports • %date%"));
+                                .setFooter(asString(notifyRaw.get("footer"), "NuviraMCReports • %date%"));
                     }
                 }
 
@@ -789,7 +789,7 @@ public class ConfigManager {
             public static class DiscordNotificationsConfig {
                 private String title = "New Report (#%id%)";
                 private String color = "#ff5555";
-                private String footer = "AevorinReports • %date%";
+                private String footer = "NuviraMCReports • %date%";
             }
         }
 
@@ -803,7 +803,7 @@ public class ConfigManager {
             public static class MySQLConfig {
                 private String host = "localhost";
                 private int port = 3306;
-                private String database = "aevorinreports";
+                private String database = "nuviramcreports";
                 private String username = "root";
                 private String password = "";
             }

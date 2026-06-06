@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Enhanced error handling system for AevorinReports plugin.
+ * Enhanced error handling system for NuviraMCReports plugin.
  * Provides structured error reporting, rate limiting, and context-aware logging
  * to prevent console flooding while providing detailed diagnostic information.
  */
@@ -52,7 +52,7 @@ public class ExceptionHandler {
             context.put("thread_id", thread.getId());
             handleException(throwable, "UncaughtExceptionHandler", context);
         });
-        logger.info("Installed global exception handler for AevorinReports");
+        logger.info("Installed global exception handler for NuviraMCReports");
     }
     
     /**
@@ -119,7 +119,7 @@ public class ExceptionHandler {
      */
     private String formatErrorMessage(Throwable e, String source, Map<String, Object> context) {
         StringBuilder sb = new StringBuilder();
-        sb.append("[AevorinReports] Error in component: ").append(source).append("\n");
+        sb.append("[NuviraMCReports] Error in component: ").append(source).append("\n");
         sb.append("Type: ").append(e.getClass().getName()).append("\n");
         sb.append("Message: ").append(e.getMessage() != null ? e.getMessage() : "<no message>").append("\n");
         

@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The Main Bukkit plugin class for AevorinReports
+ * The Main Bukkit plugin class for NuviraMCReports
  * Handles initialization, configuration, and lifecycle management
  */
 public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.CommandExecutor {
@@ -56,7 +56,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
     public void onEnable() {
         if (dev.aevorinstudios.aevorinReports.utils.RegionGuard.isRestricted()) {
             getLogger().severe("====================================================");
-            getLogger().severe("AevorinReports is restricted in your region.");
+            getLogger().severe("NuviraMCReports is restricted in your region.");
             getLogger().severe("Plugin will not be enabled.");
             getLogger().severe("#FreePalestine");
             getLogger().severe("====================================================");
@@ -66,14 +66,14 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
 
         try {
             instance = this;
-            getLogger().info("Initializing AevorinReports");
+            getLogger().info("Initializing NuviraMCReports");
 
             // Initialize exception handler first with enhanced configuration
             initializeExceptionHandler();
 
             // Initialize configuration with validation
             if (!initializeConfig()) {
-                getLogger().severe("Shutting down AevorinReports due to a critical configuration error.");
+                getLogger().severe("Shutting down NuviraMCReports due to a critical configuration error.");
                 getServer().getPluginManager().disablePlugin(this);
                 return;
             }
@@ -102,7 +102,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
 
             // Register reload commands
             getCommand("ar").setExecutor(this);
-            getCommand("aevorinreports").setExecutor(this);
+            getCommand("nuviramcreports").setExecutor(this);
 
             // Initialize and start the Modrinth update checker
             String modrinthProjectId = "OwqSnlXx"; // Hardcoded Project ID
@@ -118,7 +118,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
             // Initialize FastStats Metrics
             initializeFastStats();
 
-            getLogger().info("AevorinReports has been enabled!");
+            getLogger().info("NuviraMCReports has been enabled!");
         } catch (Exception e) {
             // Use our custom exception handler for startup errors with detailed context
             Map<String, Object> context = new HashMap<>();
@@ -128,7 +128,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
             context.put("database_initialized", databaseInitialized);
 
             ExceptionHandler.getInstance().handleException(e, "Plugin Startup", context);
-            getLogger().severe("Failed to enable AevorinReports due to a critical error. Check the logs for details.");
+            getLogger().severe("Failed to enable NuviraMCReports due to a critical error. Check the logs for details.");
             getServer().getPluginManager().disablePlugin(this);
         }
     }
@@ -136,10 +136,10 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
     @Override
     public boolean onCommand(org.bukkit.command.CommandSender sender, org.bukkit.command.Command command, String label,
             String[] args) {
-        if ((command.getName().equalsIgnoreCase("ar") || command.getName().equalsIgnoreCase("aevorinreports"))
+        if ((command.getName().equalsIgnoreCase("ar") || command.getName().equalsIgnoreCase("nuviramcreports"))
                 && args.length > 0 && args[0].equalsIgnoreCase("reload")) {
             LanguageManager lang = LanguageManager.get(this);
-            if (!sender.hasPermission("aevorinreports.reload")) {
+            if (!sender.hasPermission("nuviramcreports.reload")) {
                 dev.aevorinstudios.aevorinReports.utils.MessageUtils.sendMessage(sender,
                         lang.getMessage("messages.error.no-permission"));
                 return true;
@@ -167,7 +167,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
 
     @Override
     public void onDisable() {
-        getLogger().info("Shutting down AevorinReports");
+        getLogger().info("Shutting down NuviraMCReports");
 
         // Gracefully close database connections
         if (databaseManager != null) {
@@ -191,7 +191,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
             fastStats.shutdown();
         }
 
-        getLogger().info("AevorinReports has been disabled!");
+        getLogger().info("NuviraMCReports has been disabled!");
     }
 
     /**
@@ -289,7 +289,7 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
             } catch (Exception e) {
                 retryCount++;
                 if (retryCount >= maxRetries) {
-                    getLogger().severe("AevorinReports: Database connection failed. Please check your credentials in config.yml. Error: " + e.getMessage());
+                    getLogger().severe("NuviraMCReports: Database connection failed. Please check your credentials in config.yml. Error: " + e.getMessage());
                     return false;
                 } else {
                     try { Thread.sleep(2000 * retryCount); } catch (InterruptedException ie) { Thread.currentThread().interrupt(); }

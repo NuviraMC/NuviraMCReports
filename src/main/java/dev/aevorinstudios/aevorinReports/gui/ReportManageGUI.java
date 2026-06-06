@@ -89,7 +89,7 @@ public class ReportManageGUI {
         }
 
         // Only show management buttons if player has permission
-        if (player.hasPermission("aevorinreports.manage")) {
+        if (player.hasPermission("nuviramcreports.manage")) {
             // Move to Pending
             if (report.getStatus() != Report.ReportStatus.PENDING) {
                 ItemStack pending = new ItemStack(Material.HOPPER);
@@ -257,7 +257,7 @@ public class ReportManageGUI {
 
         paginator.add(createLegacy("\n"), "\n");
 
-        if (player.hasPermission("aevorinreports.manage")) {
+        if (player.hasPermission("nuviramcreports.manage")) {
             String clickChangeText = lang.getMessage("gui.book.page.click_to_change");
             paginator.add(createLegacy(clickChangeText), clickChangeText);
 

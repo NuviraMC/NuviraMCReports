@@ -29,7 +29,7 @@ public class ServerIdentity {
      */
     public String getIdentityToken() {
         // We look in the server root directory (parent of plugins folder)
-        // dataFolder is usually plugins/AevorinReports
+        // dataFolder is usually plugins/NuviraMCReports
         // dataFolder.getParentFile() is plugins/
         // dataFolder.getParentFile().getParentFile() is the server root
         

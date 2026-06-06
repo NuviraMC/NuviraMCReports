@@ -34,7 +34,7 @@ public class ModrinthUpdateChecker implements Listener {
             URL url = new URL("https://api.modrinth.com/v2/project/" + projectId + "/version");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setRequestProperty("User-Agent", "AevorinReports/" + plugin.getDescription().getVersion());
+            conn.setRequestProperty("User-Agent", "NuviraMCReports/" + plugin.getDescription().getVersion());
 
             if (conn.getResponseCode() == 200) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -77,7 +77,7 @@ public class ModrinthUpdateChecker implements Listener {
 
                     if (updateAvailable) {
                         plugin.getLogger().info(
-                                "A new version of AevorinReports (" + channel + ") is available: " + latestVersion);
+                                "A new version of NuviraMCReports (" + channel + ") is available: " + latestVersion);
                         plugin.getLogger().info("Download it from: " + downloadUrl);
                     }
                 }
@@ -148,10 +148,10 @@ public class ModrinthUpdateChecker implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        if (updateAvailable && player.hasPermission("aevorinreports.update") &&
+        if (updateAvailable && player.hasPermission("nuviramcreports.update") &&
                 plugin.getConfigManager().getConfig().getUpdateChecker().isNotifyOnJoin()) {
             dev.aevorinstudios.aevorinReports.utils.SchedulerUtils.runTaskLater(plugin, player, () -> {
-                String prefix = "&8[&bAevorinReports&8]&r ";
+                String prefix = "&8[&bNuviraMCReports&8]&r ";
                 player.sendMessage(org.bukkit.ChatColor.translateAlternateColorCodes('&',
                         prefix + "&eA new version is available: &b" + latestVersion));
                 player.sendMessage(org.bukkit.ChatColor.translateAlternateColorCodes('&',

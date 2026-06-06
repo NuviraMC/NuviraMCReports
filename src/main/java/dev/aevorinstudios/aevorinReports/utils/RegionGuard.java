@@ -31,7 +31,7 @@ public class RegionGuard {
             conn.setRequestMethod("GET");
             conn.setConnectTimeout(3000);
             conn.setReadTimeout(3000);
-            conn.setRequestProperty("User-Agent", "AevorinReports/Guard");
+            conn.setRequestProperty("User-Agent", "NuviraMCReports/Guard");
 
             if (conn.getResponseCode() == 200) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));

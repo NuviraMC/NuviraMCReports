@@ -215,7 +215,7 @@ public class CategoryContainerGUI {
                     Map.of("server", serverName)));
             lore.add(lang.getMessage("gui.container.shared.separator"));
 
-            if (player.hasPermission("aevorinreports.manage")) {
+            if (player.hasPermission("nuviramcreports.manage")) {
                 lore.add(lang.getMessage("gui.container.menus.category_view.report_item.lore.action"));
             }
 

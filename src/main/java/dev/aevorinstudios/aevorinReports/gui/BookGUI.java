@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Handles all GUI-related functionality for the AevorinReports plugin.
+ * Handles all GUI-related functionality for the NuviraMCReports plugin.
  * This class centralizes the creation and display of both book and chest GUIs for report management.
  */
 public class BookGUI {
@@ -343,7 +343,7 @@ public class BookGUI {
 
         components.add(createLegacy("\n"));
 
-        if (player.hasPermission("aevorinreports.manage")) {
+        if (player.hasPermission("nuviramcreports.manage")) {
             components.add(createLegacy(lang.getMessage("gui.book.page.click_to_change")));
 
             if (report.getStatus() == Report.ReportStatus.PENDING) {
@@ -443,7 +443,7 @@ public class BookGUI {
         }
         for (int slot : new int[]{12, 13, 14, 21, 23, 30, 31, 32}) gui.setItem(slot, glass);
 
-        if (player.hasPermission("aevorinreports.manage")) {
+        if (player.hasPermission("nuviramcreports.manage")) {
             if (report.getStatus() != Report.ReportStatus.PENDING) {
                 ItemStack pending = new ItemStack(Material.HOPPER);
                 ItemMeta pendingMeta = pending.getItemMeta();

@@ -1,20 +1,20 @@
 <p align="center">
-  <img src="https://i.postimg.cc/9RR2yP4Z/aevorin-reports-title.png" alt="AevorinReports Banner" width="200"/>
+  <img src="https://i.postimg.cc/9RR2yP4Z/aevorin-reports-title.png" alt="NuviraMCReports Banner" width="200"/>
 </p>
 
 # Official Documentation
 
 ## Overview
 
-AevorinReports is a modern, robust reporting system designed for Minecraft servers that require structured moderation workflows. It enables players to submit reports easily while providing staff with powerful tools to review, manage, and resolve reports efficiently. The plugin is optimized for performance, supports multiple GUI styles, integrates with Discord, and scales seamlessly across single servers and networks.
+NuviraMCReports is a modern, robust reporting system designed for Minecraft servers that require structured moderation workflows. It enables players to submit reports easily while providing staff with powerful tools to review, manage, and resolve reports efficiently. The plugin is optimized for performance, supports multiple GUI styles, integrates with Discord, and scales seamlessly across single servers and networks.
 
 ---
 
 ## Region Restriction
 
-**AevorinReports** is designed to be used globally; however, please note that the plugin is **restricted and will not function** on servers located within **Israel**. This is enforced via automated IP/timezone verification.
+**NuviraMCReports** is designed to be used globally; however, please note that the plugin is **restricted and will not function** on servers located within **Israel**. This is enforced via automated IP/timezone verification.
 
-**#FreePalestine**
+# #FreePalestine
 
 ---
 
@@ -41,8 +41,8 @@ AevorinReports is a modern, robust reporting system designed for Minecraft serve
 
 | Command                     | Description                                  | Permission              |
 | --------------------------- | -------------------------------------------- | ----------------------- |
-| `/report <player> [reason]` | Submit a report against a player             | `aevorinreports.report` |
-| `/reports`                  | View your submitted reports and their status | `aevorinreports.report` |
+| `/report <player> [reason]` | Submit a report against a player             | `nuviramcreports.report` |
+| `/reports`                  | View your submitted reports and their status | `nuviramcreports.report` |
 
 **Notes:**
 
@@ -53,10 +53,10 @@ AevorinReports is a modern, robust reporting system designed for Minecraft serve
 
 | Command                             | Description                          | Permission              |
 | ----------------------------------- | ------------------------------------ | ----------------------- |
-| `/reports`                          | Open the Admin Report Management GUI | `aevorinreports.manage` |
-| `/viewreport <id>`                  | View detailed report information     | `aevorinreports.manage` |
-| `/setreportstatus <id> to <status>` | Update report status                 | `aevorinreports.manage` |
-| `/ar reload`                        | Reload the plugin configuration      | `aevorinreports.reload` |
+| `/reports`                          | Open the Admin Report Management GUI | `nuviramcreports.manage` |
+| `/viewreport <id>`                  | View detailed report information     | `nuviramcreports.manage` |
+| `/setreportstatus <id> to <status>` | Update report status                 | `nuviramcreports.manage` |
+| `/ar reload`                        | Reload the plugin configuration      | `nuviramcreports.reload` |
 
 ### 2.3 Discord Bot Commands
 
@@ -77,16 +77,16 @@ AevorinReports is a modern, robust reporting system designed for Minecraft serve
 
 | Permission              | Description                                         | Default |
 | ----------------------- | --------------------------------------------------- | ------- |
-| `aevorinreports.report` | Allows players to submit reports                    | `true`  |
-| `aevorinreports.manage` | Allows staff to manage reports and access Admin GUI | `op`    |
-| `aevorinreports.notify` | Receive notifications when a report is submitted    | `op`    |
-| `aevorinreports.reload` | Reload the configuration                            | `op`    |
+| `nuviramcreports.report` | Allows players to submit reports                    | `true`  |
+| `nuviramcreports.manage` | Allows staff to manage reports and access Admin GUI | `op`    |
+| `nuviramcreports.notify` | Receive notifications when a report is submitted    | `op`    |
+| `nuviramcreports.reload` | Reload the configuration                            | `op`    |
 
 ### 3.2 Wildcard Permissions
 
 | Permission         | Description                           |
 | ------------------ | ------------------------------------- |
-| `aevorinreports.*` | Grants all AevorinReports permissions |
+| `nuviramcreports.*` | Grants all NuviraMCReports permissions |
 
 ---
 
@@ -115,7 +115,7 @@ This section documents every available option in `config.yml`, explaining its pu
 config-version: 5
 ```
 
-The `config-version` field is used by AevorinReports to **automatically manage and migrate your configuration** when the plugin is updated to a newer version that requires changes to `config.yml`.
+The `config-version` field is used by NuviraMCReports to **automatically manage and migrate your configuration** when the plugin is updated to a newer version that requires changes to `config.yml`.
 
 #### How It Works
 
@@ -141,7 +141,7 @@ The `config-version` field is used by AevorinReports to **automatically manage a
 language: "en_US"
 ```
 
-- Sets the active language file loaded from the `plugins/AevorinReports/lang/` folder.
+- Sets the active language file loaded from the `plugins/NuviraMCReports/lang/` folder.
 - The value must match a `.yml` filename inside that folder (without the extension).
 - **Built-in languages** (automatically extracted on first startup):
   - `en_US` – English (default)
@@ -291,7 +291,7 @@ The chat prefix, which appears before most plugin messages, is configured within
 ```yaml
 # Found in lang/en_US.yml
 messages:
-  prefix: "&8[&bAevorinReports&8]&r "
+  prefix: "&8[&bNuviraMCReports&8]&r "
 ```
 
 ---
@@ -387,7 +387,7 @@ bot-settings:
 notifications:
   title: "New Report (#%id%)"
   color: "#ff5555"
-  footer: "AevorinReports • %date%"
+  footer: "NuviraMCReports • %date%"
 ```
 
 - Fully customizable embed formatting.
@@ -406,7 +406,7 @@ notifications:
 ## 7. GUI Preview
 
 <p align="center">
-  <img src="https://i.postimg.cc/Gh4mVFNK/aevorinreports123.png" alt="AevorinReports Book GUI" width="500"/>
+  <img src="https://i.postimg.cc/Gh4mVFNK/nuviramcreports123.png" alt="NuviraMCReports Book GUI" width="500"/>
 </p>
 
 ---
@@ -436,7 +436,7 @@ notifications:
 
 ## 10. Installation Guide
 
-1. Download **AevorinReports** from the Modrinth page
+1. Download **NuviraMCReports** from the Modrinth page
 2. Place the `.jar` file into the `/plugins/` directory
 3. Restart the server to generate configuration files
 4. Configure `config.yml` and database settings
@@ -449,11 +449,11 @@ notifications:
 
 ### bStats
 
-[![AevorinReports usage graph](https://bstats.org/signatures/bukkit/AevorinReports.svg)](https://bstats.org/plugin/bukkit/AevorinReports/28310)
+[![NuviraMCReports usage graph](https://bstats.org/signatures/bukkit/NuviraMCReports.svg)](https://bstats.org/plugin/bukkit/NuviraMCReports/28310)
 
 ### FastStats
 
-AevorinReports also uses **FastStats** for advanced, real-time plugin analytics. The following custom metrics are tracked to help guide future development:
+NuviraMCReports also uses **FastStats** for advanced, real-time plugin analytics. The following custom metrics are tracked to help guide future development:
 
 | Metric                  | Description                                            |
 | ----------------------- | ------------------------------------------------------ |
@@ -470,7 +470,7 @@ All telemetry is anonymous — no player data, usernames, IPs, or personally ide
 
 ## 12. License
 
-AevorinReports is licensed under the **MIT License**.
+NuviraMCReports is licensed under the **MIT License**.
 
 You are free to use, modify, distribute, and sublicense this software, provided that the original copyright and license notice are included in all copies.
 

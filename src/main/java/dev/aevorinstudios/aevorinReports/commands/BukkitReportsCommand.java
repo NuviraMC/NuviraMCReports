@@ -37,7 +37,7 @@ public class BukkitReportsCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if (!(sender instanceof Player) || !sender.hasPermission("aevorinreports.manage")) {
+        if (!(sender instanceof Player) || !sender.hasPermission("nuviramcreports.manage")) {
             return new ArrayList<>();
         }
 
@@ -66,7 +66,7 @@ public class BukkitReportsCommand implements CommandExecutor, TabCompleter {
             return true;
         }
 
-        if (!player.hasPermission("aevorinreports.manage")) {
+        if (!player.hasPermission("nuviramcreports.manage")) {
             String guiType = plugin.getConfig().getString("reports.gui.type", "book");
             if (guiType.equalsIgnoreCase("container")) {
                 List<Report> reports = plugin.getDatabaseManager().getReportsByReporter(player.getUniqueId());

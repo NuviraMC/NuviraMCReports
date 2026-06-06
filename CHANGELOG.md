@@ -65,7 +65,7 @@ Special thanks to **feijiwang** A.K.A **nice** for reporting these issues to us.
 
 Special thanks to **feijiwang** A.K.A **nice** for the **Simplified Chinese** translation and **GraviTrace** for the **Polish** translation!
 
-We are looking for translators to add even more language support to AevorinReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
+We are looking for translators to add even more language support to NuviraMCReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
 
 ## [1.0.9-Beta-1] - 2026-05-09
 
@@ -76,28 +76,28 @@ We are looking for translators to add even more language support to AevorinRepor
 
 - **PlaceholderAPI Integration**: Added full PlaceholderAPI support for player report statistics.
   - **Player Submitted Reports**:
-    - `%aevorinreports_reports_submitted%` / `%aevorinreports_submitted%` - Total reports submitted by the player.
-    - `%aevorinreports_reports_submitted_pending%` / `%aevorinreports_submitted_pending%` - Pending reports submitted by the player.
-    - `%aevorinreports_reports_submitted_resolved%` / `%aevorinreports_submitted_resolved%` - Resolved reports submitted by the player.
-    - `%aevorinreports_reports_submitted_valid%` / `%aevorinreports_submitted_valid%` - Valid (resolved) reports submitted by the player.
-    - `%aevorinreports_reports_submitted_rejected%` / `%aevorinreports_submitted_rejected%` - Rejected reports submitted by the player.
+    - `%nuviramcreports_reports_submitted%` / `%nuviramcreports_submitted%` - Total reports submitted by the player.
+    - `%nuviramcreports_reports_submitted_pending%` / `%nuviramcreports_submitted_pending%` - Pending reports submitted by the player.
+    - `%nuviramcreports_reports_submitted_resolved%` / `%nuviramcreports_submitted_resolved%` - Resolved reports submitted by the player.
+    - `%nuviramcreports_reports_submitted_valid%` / `%nuviramcreports_submitted_valid%` - Valid (resolved) reports submitted by the player.
+    - `%nuviramcreports_reports_submitted_rejected%` / `%nuviramcreports_submitted_rejected%` - Rejected reports submitted by the player.
   - **Reports Against Player**:
-    - `%aevorinreports_reports_received%` / `%aevorinreports_received%` - Total reports received against the player.
-    - `%aevorinreports_reports_received_pending%` / `%aevorinreports_received_pending%` - Pending reports against the player.
-    - `%aevorinreports_reports_received_resolved%` / `%aevorinreports_received_resolved%` - Resolved reports against the player.
-    - `%aevorinreports_reports_received_rejected%` / `%aevorinreports_received_rejected%` - Rejected reports against the player.
+    - `%nuviramcreports_reports_received%` / `%nuviramcreports_received%` - Total reports received against the player.
+    - `%nuviramcreports_reports_received_pending%` / `%nuviramcreports_received_pending%` - Pending reports against the player.
+    - `%nuviramcreports_reports_received_resolved%` / `%nuviramcreports_received_resolved%` - Resolved reports against the player.
+    - `%nuviramcreports_reports_received_rejected%` / `%nuviramcreports_received_rejected%` - Rejected reports against the player.
   - **Server-Wide Statistics**:
-    - `%aevorinreports_total_reports%` - Total number of reports in the system.
-    - `%aevorinreports_pending_reports%` / `%aevorinreports_total_pending%` - Total pending reports on the server.
-    - `%aevorinreports_resolved_reports%` / `%aevorinreports_total_resolved%` - Total resolved reports on the server.
-    - `%aevorinreports_rejected_reports%` / `%aevorinreports_total_rejected%` - Total rejected reports on the server.
+    - `%nuviramcreports_total_reports%` - Total number of reports in the system.
+    - `%nuviramcreports_pending_reports%` / `%nuviramcreports_total_pending%` - Total pending reports on the server.
+    - `%nuviramcreports_resolved_reports%` / `%nuviramcreports_total_resolved%` - Total resolved reports on the server.
+    - `%nuviramcreports_rejected_reports%` / `%nuviramcreports_total_rejected%` - Total rejected reports on the server.
 - **Official Language Support**: Added official support for **Polish (pl_PL)**.
 
 ### Contributors
 
 Special thanks to **GraviTrace** for the **Polish** translation!
 
-We are looking for translators to add even more language support to AevorinReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
+We are looking for translators to add even more language support to NuviraMCReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
 
 ## [1.0.8] - 2026-03-31
 
@@ -180,7 +180,7 @@ We are looking for translators to add even more language support to AevorinRepor
 
 Special thanks to **clessidra** for the **Italian** translation and **FarmCraft** for the **Slovak** translation!
 
-We are looking for translators to add even more language support to AevorinReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
+We are looking for translators to add even more language support to NuviraMCReports! Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help!
 
 ## [1.0.7-Beta-2] - 2026-03-10
 
@@ -231,7 +231,7 @@ We are looking for translators to add even more language support to AevorinRepor
 
 Special thanks to **clessidra** for the **Italian** translation and **FarmCraft** for the **Slovak** translation!
 
-We are looking for translators to add even more language support to AevorinReports in the future! If you are interested in contributing, the only requirement is that the language must be natively supported by Minecraft.
+We are looking for translators to add even more language support to NuviraMCReports in the future! If you are interested in contributing, the only requirement is that the language must be natively supported by Minecraft.
 
 Join our [Discord server](https://discord.gg/SV2dXt5SwF) and open a ticket if you'd like to help with translations!
 
@@ -368,8 +368,8 @@ Special thanks to **clessidra** for helping test and identify the Discord module
 ### Security & Permissions
 
 - **New Bypass Permissions**:
-  - `aevorinreports.bypass.cooldown`: Allows specified players/ranks to bypass the reporting cooldown.
-  - `aevorinreports.bypass.limit`: Allows specified players/ranks to bypass the active report limit.
+  - `nuviramcreports.bypass.cooldown`: Allows specified players/ranks to bypass the reporting cooldown.
+  - `nuviramcreports.bypass.limit`: Allows specified players/ranks to bypass the active report limit.
 
 ## [1.0.4.3] - 2026-01-05
 

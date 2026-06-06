@@ -38,7 +38,7 @@ public class BukkitReportCommand implements CommandExecutor, TabCompleter {
             return true;
         }
 
-        if (!player.hasPermission("aevorinreports.report")) {
+        if (!player.hasPermission("nuviramcreports.report")) {
             MessageUtils.sendMessage(player, lang.getMessage("messages.error.no-permission"));
             return true;
         }
@@ -64,7 +64,7 @@ public class BukkitReportCommand implements CommandExecutor, TabCompleter {
         }
 
         // Check report cooldown
-        if (!player.hasPermission("aevorinreports.bypass.cooldown")) {
+        if (!player.hasPermission("nuviramcreports.bypass.cooldown")) {
             long lastReport = cooldowns.getOrDefault(player.getUniqueId(), 0L);
             int cooldownSeconds = plugin.getConfigManager().getConfig().getReports().getCooldownSeconds();
             long currentTime = System.currentTimeMillis();
@@ -78,7 +78,7 @@ public class BukkitReportCommand implements CommandExecutor, TabCompleter {
         }
 
         // Check active reports limit
-        if (!player.hasPermission("aevorinreports.bypass.limit")) {
+        if (!player.hasPermission("nuviramcreports.bypass.limit")) {
             int maxActive = plugin.getConfigManager().getConfig().getReports().getMaxActiveReportsPerPlayer();
             long activeCount = plugin.getDatabaseManager().getReportsByReporter(player.getUniqueId()).stream()
                     .filter(r -> r.getStatus() == Report.ReportStatus.PENDING)
@@ -148,7 +148,7 @@ public class BukkitReportCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if (!(sender instanceof Player) || !sender.hasPermission("aevorinreports.report")) {
+        if (!(sender instanceof Player) || !sender.hasPermission("nuviramcreports.report")) {
             return new ArrayList<>();
         }
 
@@ -214,7 +214,7 @@ public class BukkitReportCommand implements CommandExecutor, TabCompleter {
         ));
 
         for (Player staff : plugin.getServer().getOnlinePlayers()) {
-            if (staff.hasPermission("aevorinreports.notify")) {
+            if (staff.hasPermission("nuviramcreports.notify")) {
                 MessageUtils.sendMessage(staff, notification);
             }
         }

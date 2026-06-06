@@ -53,7 +53,7 @@ public class DiscordListener extends ListenerAdapter {
 
     private void handleHelpSlash(SlashCommandInteractionEvent event) {
         EmbedBuilder embed = new EmbedBuilder()
-                .setTitle("AevorinReports Help")
+                .setTitle("NuviraMCReports Help")
                 .setDescription("Manage Minecraft reports from Discord using official Slash Commands.")
                 .addField("/reports", "List all active pending reports.", false)
                 .addField("/lookup <id>", "Show detailed info about a report.", false)

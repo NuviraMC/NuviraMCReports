@@ -58,7 +58,7 @@ public class ViewReportCommand implements CommandExecutor {
         }
 
         // Permission check: Allow if has permission OR is the reporter
-        if (!player.hasPermission("aevorinreports.manage") && !report.getReporterUuid().equals(player.getUniqueId())) {
+        if (!player.hasPermission("nuviramcreports.manage") && !report.getReporterUuid().equals(player.getUniqueId())) {
              dev.aevorinstudios.aevorinReports.utils.MessageUtils.sendMessage(player, dev.aevorinstudios.aevorinReports.config.LanguageManager.get(plugin).getMessage("messages.error.no-permission"));
              return;
         }

@@ -7,7 +7,7 @@ facing: 0.0
 down-origin: false
 pages:
 - lines:
-  - content: '&b&lAevorinReports &f&lNetwork Stats'
+  - content: '&b&lNuviraMCReports &f&lNetwork Stats'
     height: 0.3
   - content: '&8&m------------------------------'
     height: 0.25
@@ -29,7 +29,7 @@ pages:
     height: 0.25
   - content: '&7Tip: replace &fsurvival &7with your server-name.'
     height: 0.3
-  - content: '&b&lAevorinReports &f&lYour Submitted Reports'
+  - content: '&b&lNuviraMCReports &f&lYour Submitted Reports'
     height: 0.3
   - content: '&8&m------------------------------'
     height: 0.25
@@ -47,7 +47,7 @@ pages:
     height: 0.25
   - content: '&7These stats follow whoever is viewing.'
     height: 0.3
-  - content: '&b&lAevorinReports &f&lReports Against You'
+  - content: '&b&lNuviraMCReports &f&lReports Against You'
     height: 0.3
   - content: '&8&m------------------------------'
     height: 0.25
@@ -64,7 +64,7 @@ pages:
   - content: '&7Useful for personal holograms and scoreboards.'
     height: 0.3
 - lines:
-  - content: '&b&lAevorinReports &f&lNamed Player Template'
+  - content: '&b&lNuviraMCReports &f&lNamed Player Template'
     height: 0.3
   - content: '&8&m------------------------------'
     height: 0.25

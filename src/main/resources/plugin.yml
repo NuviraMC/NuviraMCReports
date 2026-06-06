@@ -1,4 +1,4 @@
-name: AevorinReports
+name: NuviraMCReports
 version: "1.0.9.1"
 main: dev.aevorinstudios.aevorinReports.bukkit.BukkitPlugin
 api-version: "1.18"
@@ -9,23 +9,23 @@ softdepend: [PlaceholderAPI]
 
 commands:
   ar:
-    description: Reload the AevorinReports configuration
+    description: Reload the NuviraMCReports configuration
     usage: /ar reload
-    permission: aevorinreports.reload
+    permission: nuviramcreports.reload
     permission-message: You don't have permission to reload the config!
-    aliases: [aevorinreports]
-  aevorinreports:
-    description: Reload the AevorinReports configuration
-    usage: /aevorinreports reload
-    permission: aevorinreports.reload
+    aliases: [nr]
+  nuviramcreports:
+    description: Reload the NuviraMCReports configuration
+    usage: /nuviramcreports reload
+    permission: nuviramcreports.reload
     permission-message: You don't have permission to reload the config!
-    aliases: [ar]
+    aliases: []
   report:
     description: Report a player for breaking the rules
     usage: |
       /report <player> - Opens the report GUI
       /report <player> <reason> - Directly submit a report
-    permission: aevorinreports.report
+    permission: nuviramcreports.report
     permission-message: You don't have permission to use this command!
 
   reports:
@@ -38,40 +38,40 @@ commands:
   setreportstatus:
     description: Set the status of a report
     usage: /setreportstatus <id> to <status>
-    permission: aevorinreports.manage
+    permission: nuviramcreports.manage
     permission-message: You don't have permission to use this command!
     aliases: []
     hidden: true
 
 permissions:
-  aevorinreports.report:
+  nuviramcreports.report:
     description: Allows players to report others
     default: true
-  aevorinreports.use:
+  nuviramcreports.use:
     description: Allows players to create reports
     default: true
-  aevorinreports.anonymous:
+  nuviramcreports.anonymous:
     description: Allows players to submit anonymous reports
     default: op
-  aevorinreports.manage:
+  nuviramcreports.manage:
     description: Allows staff to manage reports
     default: op
-  aevorinreports.notify:
+  nuviramcreports.notify:
     description: Receive notifications about new reports
     default: op
-  aevorinreports.debug:
+  nuviramcreports.debug:
     description: Allows access to debug commands and features
     default: op
-  aevorinreports.update:
+  nuviramcreports.update:
     description: Receive notifications about plugin updates
     default: op
-  aevorinreports.admin:
+  nuviramcreports.admin:
     description: Full access to all plugin features
     default: op
     children:
-      aevorinreports.use: true
-      aevorinreports.anonymous: true
-      aevorinreports.manage: true
-      aevorinreports.notify: true
-      aevorinreports.debug: true
-      aevorinreports.update: true
+      nuviramcreports.use: true
+      nuviramcreports.anonymous: true
+      nuviramcreports.manage: true
+      nuviramcreports.notify: true
+      nuviramcreports.debug: true
+      nuviramcreports.update: true

@@ -33,7 +33,7 @@ public class SetReportStatusCommand implements CommandExecutor, TabCompleter {
             return true;
         }
 
-        if (!player.hasPermission("aevorinreports.manage")) {
+        if (!player.hasPermission("nuviramcreports.manage")) {
             MessageUtils.sendMessage(player, lang.getMessage("messages.error.no-permission"));
             return true;
         }
@@ -88,7 +88,7 @@ public class SetReportStatusCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if (!sender.hasPermission("aevorinreports.manage")) {
+        if (!sender.hasPermission("nuviramcreports.manage")) {
             return new ArrayList<>();
         }
 

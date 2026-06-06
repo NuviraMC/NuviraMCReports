@@ -1,4 +1,4 @@
-# AevorinReports Configuration File
+# NuviraMCReports Configuration File
 
 # Please Do not change the config version
 config-version: 5
@@ -18,7 +18,7 @@ database:
   mysql:
     host: "localhost"
     port: 3306
-    database: "aevorin_reports"
+    database: "nuviramc_reports"
     username: "root"
     password: "password"
   file:
@@ -115,4 +115,4 @@ discord:
     # Color of the embed (Hex code)
     color: "#ff5555"
     # Footer of the embed
-    footer: "AevorinReports • %date%"
+    footer: "NuviraMCReports • %date%"
