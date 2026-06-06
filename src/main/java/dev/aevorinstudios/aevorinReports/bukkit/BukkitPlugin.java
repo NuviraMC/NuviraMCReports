@@ -65,6 +65,8 @@ public class BukkitPlugin extends JavaPlugin implements org.bukkit.command.Comma
         }
 
         try {
+            fastStats.shutdown();
+
             instance = this;
             getLogger().info("Initializing NuviraMCReports");
 
